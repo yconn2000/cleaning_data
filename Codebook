@@ -1,0 +1,13 @@
+Description
+Merge training and test dataset into one, using each observation’s mean and standard deviation to simplify the table. Put descriptive activities name and labels to the table, finally use this dataset to create a tidy dataset with activities, labels as row and column, average number as the contents. Write to a file. 
+Data Source
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+Variables
+x_tran, y_tran, x_test, y_test, subject_test, features, activities are all related to the downloaded .txt filename
+x_ttl, y_ttl, subject_ttl is the processed table
+all_all is the conbined value plus title
+
+Processing steps
+1.	Use rbind() to merge x-train and x-test, y-train and y-test into x-ttl and y-ttl
+2.	Replace the value with each observation’s mean and standard deviation
+3.	Extract activities names, put into table, replace the table labels with meaningful labels
